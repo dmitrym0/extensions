@@ -143,4 +143,5 @@ const useProfileOptions = (): ProfileOption[] => {
 
 const isRowWithActiveSession = (line: string) =>
   (line.includes("sts.AssumeRole:") && !line.includes("sts.AssumeRole:-")) ||
+  (line.includes("sso.GetRoleCredentials:") && !line.includes(":-")) ||
   (line.includes("sts.GetSessionToken:") && !line.includes("sts.GetSessionToken:-"));
